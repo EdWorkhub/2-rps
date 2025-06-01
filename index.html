@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors - Odin Project 2</title>
-    <script src="./main.js"></script>
 </head>
 <body>
+
+    <div class="container">
+
+        <section class="header-section">
+            <header class="header-bar">
+                <h1 class="header-h1">
+                    Rock Paper Scissors 
+                </h1>
+                <button id="header-reload" onclick="location.reload()">
+                    Reload
+                </button>
+            </header>
+        </section>
+
+        <section class="game-section">
+            <div class="game-container">
+                Select Player Choice 
+                <button class="game-select" id="game-select--rock" onclick="playRound('rock')">
+                    Rock
+                </button>
+                <button class="game-select" id="game-select--paper" onclick="playRound('paper')">
+                    Paper
+                </button>
+                <button class="game-select" id="game-select--scissors" onclick="playRound('scissors')">
+                    Scissors
+                </button>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-container">
+                <div class="results-round">
+                    
+                     
+                    <p class="results-human-choice"></p>
+                    <p class="results-computer-choice"></p>
+
+                    Round Results
+                    <p class="results-text"></p>
+
+                </div>
+
+                <div class="results-game">
+                    Game Results 
+                    <p class="results-game-text"></p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="winner-section">
+            <div class="winner-bar">
+                <p class="winner-text"></p>
+            </div>
+        </section>
+
+    </div>
     
 </body>
+
+<script src="./main.js"></script>
+
+
 </html>
