@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors - Odin Project 2</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
@@ -15,58 +16,57 @@
                     Rock Paper Scissors 
                 </h1>
                 <button id="header-reload" onclick="location.reload()">
-                    Reload
+                    New Round
                 </button>
             </header>
         </section>
 
         <section class="game-section">
             <div class="game-container">
-                Select Player Choice 
-                <button class="game-select" id="game-select--rock" onclick="playRound('rock')">
-                    Rock
-                </button>
-                <button class="game-select" id="game-select--paper" onclick="playRound('paper')">
-                    Paper
-                </button>
-                <button class="game-select" id="game-select--scissors" onclick="playRound('scissors')">
-                    Scissors
-                </button>
-            </div>
-        </section>
+                <div class="game-selection-container">
+                    <h2 class="game-h2">Select Player Choice</h2>
+                    <div class="game-button-container">
+                        <button class="game-select" id="game-select--rock" onclick="playRound('rock')">
+                            Rock
+                        </button>
+                        <button class="game-select" id="game-select--paper" onclick="playRound('paper')">
+                            Paper
+                        </button>
+                        <button class="game-select" id="game-select--scissors" onclick="playRound('scissors')">
+                            Scissors
+                        </button>
+                    </div>
+                </div>
+            
 
-        <section class="results-section">
-            <div class="results-container">
-                <div class="results-round">
+                <div class="round-results-container">
+                    <div class="results-round">
+                        
+                        <p class="results-human-choice"></p>
+                        <p class="results-computer-choice"></p>
+                        <p class="results-text"></p>
+
+                    </div>
+                </div>
+
+                <div class="game-results-container">
+
+                    <div class="results-game">
+                        <p class="results-game-text"></p>
+                    </div>
                     
-                     
-                    <p class="results-human-choice"></p>
-                    <p class="results-computer-choice"></p>
-
-                    Round Results
-                    <p class="results-text"></p>
-
                 </div>
-
-                <div class="results-game">
-                    Game Results 
-                    <p class="results-game-text"></p>
-                </div>
-
             </div>
         </section>
 
-        <section class="winner-section">
-            <div class="winner-bar">
-                <p class="winner-text"></p>
+        <section class="footer-section">
+            <div class="footer-bar">
+                <h3 class="footer-text">Odin Project 3</h3>
             </div>
         </section>
 
     </div>
     
 </body>
-
 <script src="./main.js"></script>
-
-
 </html>
