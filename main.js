@@ -81,18 +81,3 @@ function displayFinalScore() {
     let element = document.querySelector(".results-game-text");
     element.innerHTML = roundResults;
 }
-
-// Run 5 Rounds and Report Results to Console Log 
-// function playGame(humanChoice, computerChoice) {
-
-//     for (let i = 0; i < 5; i++) {
-//         humanChoice = getHumanChoice(); 
-//         computerChoice = getComputerChoice();
-//         playRound(humanChoice, computerChoice);
-//     }
-    
-//     displayFinalScore();
-// }
-
-
-

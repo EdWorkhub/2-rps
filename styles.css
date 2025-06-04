@@ -4,30 +4,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
     display: flex; 
     flex-direction: column;
-    
 }
 
-body {
-    
-    
-}
 
 /* || HEADER */ 
 
 .header-bar {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 8vh;
     padding: 1rem 1rem 1rem 1rem;
-    background-color: goldenrod;
+    background-color: #292f33;
 }
 
 .header-h1 {
     font-weight: bold;
+    color: #e5e2d6;
 }
 
 #header-reload {
@@ -42,9 +41,9 @@ body {
 
 .game-container {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
     align-items: center;
-    height: 90vh;
+    height: 84vh;
     background-color: bisque;
     padding: 1rem 0rem 1rem 0rem; 
     text-align: center;
@@ -55,11 +54,19 @@ body {
 
 }
 
+.game-selection-container {
+    width: 25vw;
+    height: 40vh;
+    padding: 9rem 0rem 9rem 0rem;
+    background-color: rgba(240, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
 .game-button-container {
     display: flex;
     justify-content: center;
-    gap: 6rem;
-    padding: 1rem 0rem 1rem 0rem;
+    gap: 3rem;
+    padding: 3rem 0rem 0rem 0rem;
 }
 
 .game-select {
@@ -72,22 +79,35 @@ body {
 
 /* || ROUND-RESULTS */
 
+.results-round-header {
+    font-size: 1rem;
+}
+
 .round-results-container {
-    background-color: coral;
+    background-color: #ddab45;
+    width: 25vw;
+    height: 40vh;
+    padding: 9rem 0rem 9rem 0rem;
 }
 
 /* || GAME-RESULTS */
 
 .game-results-container {
-    background-color: cornflowerblue;
+    background-color: #ba4f5e;
+    height: 40vh;
+    width: 25vw;
+    padding: 12rem 0rem 12rem 0rem;
 }
 
 /* || FOOTER */ 
 
 .footer-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
     text-align: center;
-    background-color: aquamarine;
-    padding: 1rem 0rem 1rem 0rem;
+    background-color: #4f52be;
 }
 
 .footer-text {
