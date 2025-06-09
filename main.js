@@ -52,16 +52,26 @@ function playRound(humanChoice) {
     computerChoiceText.innerHTML = `Computer has picked ${computerChoice}!`;
 
     let resultsText = document.querySelector(".results-text");
-    resultsText.innerHTML = `${text} Human Score: ${humanScore} - Computer Score: ${computerScore}`
+    resultsText.innerHTML = `${text} Human Score: ${humanScore} - Computer Score: ${computerScore}`;
 
+    // Print RPS Images 
+    let humanImg = document.getElementById("human-img");
+    humanImg.src = `./images/${humanChoice}.png`;
 
-    document.getElementById("human-img").src = `./images/${humanChoice}.png`
+    /* Remove display: none - remove Class name, reflow and readd Class name to 
+    trigger CSS animation on button press */
+    humanImg.style = "";
+    humanImg.className = "";
+    void humanImg.offsetWidth;
+    humanImg.className = "choice-img choice-img-right";
 
-    document.getElementById("human-img").style = ""
-
-    document.getElementById("computer-img").src = `./images/${computerChoice}.png`
-
-    document.getElementById("computer-img").style = ""
+    let computerImg = document.getElementById("computer-img");
+    computerImg.src = `./images/${computerChoice}.png`;
+    
+    computerImg.style = "";
+    computerImg.className = "";
+    void computerImg.offsetWidth;
+    computerImg.className = "choice-img choice-img-left";
 
     // Print Game Results When Score Reaches 5 & Disable Buttons 
     if (humanScore === 5 || computerScore === 5) {
