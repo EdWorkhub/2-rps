@@ -12,6 +12,8 @@
     flex-direction: column;
 }
 
+/* || STYLE ONLY */ 
+
 
 /* || HEADER */ 
 
@@ -41,6 +43,7 @@
 
 .game-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-evenly;
     align-items: center;
     height: 84vh;
@@ -49,6 +52,28 @@
     text-align: center;
     font-size: 1.5rem;
 }
+
+.game-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+}
+
+.choice-imgs {
+    height: 100px;
+    width: 300px;
+    
+}
+
+.choice-img {
+    width: 100px;
+    height: 100px;
+    margin: 0px 10px;
+    
+}
+
 
 .game-h2 {
 
@@ -96,7 +121,7 @@
     background-color: #ba4f5e;
     height: 40vh;
     width: 25vw;
-    padding: 12rem 0rem 12rem 0rem;
+    padding: 9rem 0rem 9rem 0rem;
 }
 
 /* || FOOTER */ 

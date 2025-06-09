@@ -22,7 +22,7 @@ function playRound(humanChoice) {
         rock: {
             rock: { result: 'tie', action: () => { text = "It's a tie!"; }},
             paper: { result: 'lose', action: () => { text = "You lose!"; computerScore += 1}},
-            scissors: { result: 'win', action: () => { text ="You win!"; humanScore += 1; }}
+            scissors: { result: 'win', action: () => { text = "You win!"; humanScore += 1; }}
         },
         paper: {
             rock: { result: 'win', action: () => { text = "You win!"; humanScore += 1; }},
@@ -53,6 +53,15 @@ function playRound(humanChoice) {
 
     let resultsText = document.querySelector(".results-text");
     resultsText.innerHTML = `${text} Human Score: ${humanScore} - Computer Score: ${computerScore}`
+
+
+    document.getElementById("human-img").src = `./images/${humanChoice}.png`
+
+    document.getElementById("human-img").style = ""
+
+    document.getElementById("computer-img").src = `./images/${computerChoice}.png`
+
+    document.getElementById("computer-img").style = ""
 
     // Print Game Results When Score Reaches 5 & Disable Buttons 
     if (humanScore === 5 || computerScore === 5) {
