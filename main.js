@@ -39,6 +39,7 @@ function playRound(humanChoice) {
     // Round Result 
     const result = victoryMap[humanChoice][computerChoice];
 
+
     // Iterate Score (if relevant)
     if (result) {
         result.action();
@@ -58,8 +59,7 @@ function playRound(humanChoice) {
     let humanImg = document.getElementById("human-img");
     humanImg.src = `./images/${humanChoice}.png`;
 
-    /* Remove display: none - remove Class name, reflow and readd Class name to 
-    trigger CSS animation on button press */
+    /* Remove display: none - remove Class name, re-flow and re-add Class name to trigger CSS animation on button press */
     humanImg.style = "";
     humanImg.className = "";
     void humanImg.offsetWidth;
@@ -72,6 +72,29 @@ function playRound(humanChoice) {
     computerImg.className = "";
     void computerImg.offsetWidth;
     computerImg.className = "choice-img choice-img-left";
+
+    // Set PNG Filters for Color Conversion
+    let green = "invert(73%) sepia(81%) saturate(395%) hue-rotate(61deg) brightness(94%) contrast(92%)"
+
+    let red = "invert(45%) sepia(97%) saturate(4055%) hue-rotate(346deg) brightness(97%) contrast(92%)"
+
+    // Display Winner Text, Choose PNG Colors 
+    let winnerText = document.querySelector(".winner-text");
+    winnerText.style = "";
+
+    if (result.result === "tie") {
+        winnerText.innerHTML = "It's a tie!";
+    } else if (result.result === "win") {
+        winnerText.innerHTML = "Player wins!";
+        winnerText.style.color = "green";
+        humanImg.style.filter = `${green}`
+        computerImg.style.filter = `${red}`
+    } else {
+        winnerText.innerHTML = "Computer wins!";
+        winnerText.style.color = "red";
+        humanImg.style.filter = `${red}`
+        computerImg.style.filter = `${green}`
+    }
 
     // Print Game Results When Score Reaches 5 & Disable Buttons 
     if (humanScore === 5 || computerScore === 5) {

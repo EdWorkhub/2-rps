@@ -11,6 +11,9 @@
 .container {
     display: flex; 
     flex-direction: column;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* || UTILITY */
@@ -71,7 +74,7 @@
     height: 30px;
 }
 
-/* || GAME */ 
+/* || GAME - CONTAINER */ 
 
 .game-container {
     display: flex;
@@ -85,12 +88,15 @@
     font-size: 1.5rem;
 }
 
+/* || GAME - IMAGES */ 
+
 .game-img {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 100px;
+    gap: 25px;
 }
 
 .choice-imgs {
@@ -112,6 +118,7 @@
     width: 100px;
     height: 100px;
     margin: 0px 10px;
+    
 }
 
 #computer-img {
@@ -119,6 +126,16 @@
     height: 100px;
     margin: 0px 10px;
 }
+
+/* || GAME - WINNER BAR */ 
+
+.winner-text {
+    height: 50px;
+    width: 500px;
+    font-size: 3rem;
+}
+
+/* || GAME-SELECTION */ 
 
 .game-selection-container {
     width: 25vw;
@@ -131,7 +148,7 @@
 .game-button-container {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1rem;
     padding: 3rem 0rem 0rem 0rem;
 }
 
