@@ -46,14 +46,8 @@ function playRound(humanChoice) {
     }
     
     // Print Round Results to page
-    let humanChoiceText = document.querySelector(".results-human-choice");
-    humanChoiceText.innerHTML = `You have picked ${humanChoice}!`;
-
-    let computerChoiceText = document.querySelector(".results-computer-choice");
-    computerChoiceText.innerHTML = `Computer has picked ${computerChoice}!`;
-
     let resultsText = document.querySelector(".results-text");
-    resultsText.innerHTML = `${text} Human Score: ${humanScore} - Computer Score: ${computerScore}`;
+    resultsText.innerHTML = `${text}` + `<br />` + `Human Score: ${humanScore} - Computer Score: ${computerScore}`;
 
     // Print RPS Images 
     let humanImg = document.getElementById("human-img");
